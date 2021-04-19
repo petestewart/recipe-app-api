@@ -16,7 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+# any request that starts with '/api/user' will be routed to the urls module of the user app
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/user/', include('user.urls')) # any request that starts with '/api/user' will be routed to the urls module of the user app
+    path('api/user/', include('user.urls')),
 ]
